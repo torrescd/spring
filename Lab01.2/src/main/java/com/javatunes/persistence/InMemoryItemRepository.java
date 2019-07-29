@@ -20,6 +20,9 @@ import java.util.stream.Collectors;
 import com.javatunes.domain.MusicCategory;
 import com.javatunes.domain.MusicItem;
 
+import javax.inject.Named;
+
+@Named("inMemoryRepo")
 public class InMemoryItemRepository implements ItemRepository {
 
 	/** This is simply to eliminate the need to provide an in-memory database! */

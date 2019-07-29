@@ -6,7 +6,12 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
+	<!--
+        <bean id="inMemoryRepo" class="com.javatunes.persistence.InMemoryItemRepository"></bean>
+        <bean id="musicCatalog" class="com.javatunes.service.CatalogImpl">
+            <property name="itemRepository" ref="inMemoryRepository" />
+        </bean>
+-->
+	<context:component-scan base-package="com.javatunes"/>
 
-	<bean id="musicCatalog" class="com.javatunes.service.CatalogImpl"/>
-	
 </beans>

@@ -9,12 +9,19 @@
 package com.javatunes.service;
 
 import java.util.Collection;
+import javax.inject.Inject;
+import javax.inject.Named;
 
 import com.javatunes.domain.MusicItem;
 import com.javatunes.persistence.ItemRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+
+
 // TODO: implement appropriate interface
+@Named("musicCatalog")
 public class CatalogImpl implements Catalog {
 
+	@Autowired
 	private ItemRepository itemRepository;
 
 	public void setItemRepository(ItemRepository itemRepository) {
