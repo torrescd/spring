@@ -13,6 +13,8 @@ import java.util.Collection;
 import com.javatunes.domain.MusicItem;
 import com.javatunes.persistence.ItemRepository;
 
+import javax.annotation.PostConstruct;
+
 public class CatalogImpl implements Catalog {
 
 	private ItemRepository itemRepository;
@@ -40,6 +42,11 @@ public class CatalogImpl implements Catalog {
 	@Override
 	public String toString() {
 		return "I am a shiny new " + getClass().getName() + " brought to you from Spring" + " but you can just call me " + getClass().getInterfaces()[0] + ".  My itemRepository is " + itemRepository;
+	}
+
+	@PostConstruct
+	public void init(){
+		System.out.println("Inicializando bean catalog impl");
 	}
 
 }

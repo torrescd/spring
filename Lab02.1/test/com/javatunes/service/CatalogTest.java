@@ -60,5 +60,14 @@ public class CatalogTest {
 		ctx.close();
 	}
 
+	@Test
+	public void diffBeansTest(){
+		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(SpringConfig.class);
+		// Lookup catalog
+		Catalog cat = (Catalog)ctx.getBean(Catalog.class);
+
+		Catalog cat2 = (Catalog)ctx.getBean(Catalog.class);
+		assertNotEquals(cat,cat2);
+	}
 
 }
