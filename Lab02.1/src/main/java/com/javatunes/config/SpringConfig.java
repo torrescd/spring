@@ -5,10 +5,17 @@
  * We hope that it's useful to you. Enjoy. 
  * Copyright LearningPatterns Inc.
  */
- 
+
 package com.javatunes.config;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 
 // TODO: Declare as a Spring configuration class
 // TODO: Add component scan for com.javatunes
 // TODO: Import other config classes
+@Configuration
+@ComponentScan(resourcePattern = "com.javatunes.config")
+@Import({SpringDomainConfig.class, SpringRepositoryConfig.class, SpringServicesConfig.class})
 public class SpringConfig {}

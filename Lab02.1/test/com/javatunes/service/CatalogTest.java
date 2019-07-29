@@ -17,13 +17,14 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import com.javatunes.config.SpringConfig;
 import com.javatunes.domain.MusicItem;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class CatalogTest {
 
 	@Test
 	public void testCatalogLookupPositive() {
 		// TODO: Create context, pass SpringConfig.class to the constructor
-		AnnotationConfigApplicationContext ctx = null;
+		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(SpringConfig.class);
 		assertNotNull("spring container should not be null", ctx);
 
 		// Look up the musicCatalog, assert it's not null, invoke toString  
@@ -39,7 +40,7 @@ public class CatalogTest {
 	public void testCatalogPositive() {
 		String keyword = "a";
 		// TODO: Create context, pass SpringConfig.class to the constructor
-		AnnotationConfigApplicationContext ctx = null;
+		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(SpringConfig.class);
 		// Lookup catalog
 		Catalog cat = (Catalog)ctx.getBean(Catalog.class);
 
