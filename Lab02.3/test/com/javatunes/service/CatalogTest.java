@@ -42,6 +42,19 @@ public class CatalogTest {
 				
 		ctx.close();
 	}
+
+	@Test
+	public void testProdDefault() {
+		// Create context with no config classes
+		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(SpringConfig.class);
+		// Setup for prod config
+		// Look up the musicCatalog, assert it's not null, invoke toString
+		Catalog cat = (Catalog)ctx.getBean(Catalog.class);
+		assertNotNull("Prod Catalog should not be null", cat);
+		System.out.println(cat.toString());
+
+		ctx.close();
+	}
 	
 	@Test
 	public void testProdCatalogLookupPositive() {

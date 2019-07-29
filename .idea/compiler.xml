@@ -11,13 +11,14 @@
         <module name="spring-boot-HelloWorld (3)" />
         <module name="spring-boot-JPA (4)" />
         <module name="spring-boot-HelloWorld" />
+        <module name="spring-boot-HelloWorld-1.2" />
         <module name="spring-test" />
         <module name="spring-boot-HelloWorld (4)" />
+        <module name="spring-web-integration (1)" />
         <module name="spring-web-integration (2)" />
-        <module name="junit-demo" />
         <module name="spring-boot-data-JPA" />
         <module name="spring-boot-JPA (1)" />
-        <module name="spring-web-integration (1)" />
+        <module name="junit-demo" />
         <module name="spring-boot-HelloWorld (1)" />
         <module name="spring-boot-JPA (2)" />
         <module name="spring-boot-HelloWorld (2)" />
@@ -32,6 +33,7 @@
       <module name="spring-boot-HelloWorld (2)" options="-parameters" />
       <module name="spring-boot-HelloWorld (3)" options="-parameters" />
       <module name="spring-boot-HelloWorld (4)" options="-parameters" />
+      <module name="spring-boot-HelloWorld-1.2" options="-parameters" />
       <module name="spring-boot-JPA (1)" options="-parameters" />
       <module name="spring-boot-JPA (2)" options="-parameters" />
       <module name="spring-boot-JPA (3)" options="-parameters" />

@@ -18,7 +18,7 @@ import org.springframework.context.annotation.Profile;
 
 @Configuration
 // TODO: annotate this class for profile "prod"
-@Profile("prod")
+@Profile({"prod","default"})
 public class SpringProdRepositoryConfig {
 
 	@Autowired
