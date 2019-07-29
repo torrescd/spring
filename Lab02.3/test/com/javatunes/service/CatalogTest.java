@@ -24,6 +24,9 @@ public class CatalogTest {
 		// TODO: Set the profile to the profile string given
 		// TODO: Register the given Config classes
 		// TODO: refresh the context
+		ctx.getEnvironment().setActiveProfiles(profile);
+		ctx.register(SpringConfig.class);
+		ctx.refresh();
 	}
 
 	@Test

@@ -8,14 +8,17 @@
  
 package com.javatunes.config;
 
+import com.javatunes.persistence.InMemoryItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import com.javatunes.persistence.ItemRepository;
+import org.springframework.context.annotation.Profile;
 
 @Configuration
 // TODO: Annotate this class for profile "dev"
+@Profile("dev")
 public class SpringDevRepositoryConfig {
 
 	@Autowired
@@ -26,7 +29,7 @@ public class SpringDevRepositoryConfig {
 		// TODO: create an instance of the dev repository
 		// TODO: set the max search results to maxSearchResults
 		// TODO: return the instance reference
-		return null;
+		return new InMemoryItemRepository();
 	}
 
 }
