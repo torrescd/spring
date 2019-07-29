@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+          http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+        version="2.2">
+
+  <persistence-unit name="TODO" transaction-type="TODO">
+    <properties>
+    
+      <!--  Database Connection configuration properties for Hibernate -->
+      <property name="hibernate.connection.username" value="TODO"/>
+      <property name="hibernate.connection.password" value="TODO"/>
+      <property name="hibernate.connection.url" value="jdbc:derby://localhost:1527/TODO"/>
+      <property name="hibernate.connection.driver_class" value="org.apache.derby.jdbc.ClientDriver"/>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.DerbyTenSevenDialect"/>
+
+      <!--  Hibernate specific logging configuration -->
+      <property name="hibernate.show_sql" value="false"/>
+
+      <!--  Hibernate specific configuration -->
+      <!-- Use Thread local contextual sessions -->
+      <property name="hibernate.current_session_context_class" value="thread"/>
+      <!--  Use internal HIbernate pool -->
+      <property name="hibernate.connection.pool_size" value="1"/>
+      <!-- Disable the second-level cache  -->
+      <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+
+      </properties>
+   </persistence-unit>
+
+</persistence>

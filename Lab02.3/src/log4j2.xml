@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration status="INFO">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+        </Console>
+
+        <!--  Appender to log to file -->
+        <File name="MyFile" fileName="hibernate.log" immediateFlush="false" append="false">
+            <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>    
+
+    </Appenders>
+    
+    
+    <Loggers>
+        <Root level="error">
+            <AppenderRef ref="Console" />
+        </Root>
+
+    <!-- General Spring Logging info -->
+    <Logger name="org.springframework" level="info"/>
+
+   <!-- Useful Hibernate logging info -->
+
+    <!-- General Hibernate Logging info -->
+    <!-- <Logger name="org.hibernate" level="info"/>  -->
+
+	<!-- log JDBC bind parameters -->
+	<!-- <Logger name="org.hibernate.type" level="info"/>  -->
+
+	<!-- log just the SQL -->
+	<!-- <Logger name="org.hibernate.SQL" level="debug"/> -->
+	<!-- log JDBC resource acquisition -->
+	<!-- <Logger name="org.hibernate.jdbc" level="debug"/> -->
+		
+    </Loggers>  
+    
+ </Configuration>  
